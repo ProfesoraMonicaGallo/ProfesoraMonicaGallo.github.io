@@ -1,9 +1,9 @@
-.social {
-	position: absolute; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/	
-	height: 100%;		
-	background-color: #E0E0E0 ;
-}
+.social{	
+	width: 250px;
+	position: absolute;
+	z-index: 2;
 
+}
 .social ul {
 	list-style: none;
 }
@@ -36,4 +36,47 @@
 .btn-curso{
 	width: 100%;
 	margin: 10px;
+}
+.calendario{
+	border:solid 1px #777;
+	width:93%;
+	height:500px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-right: 7%;
+}
+#navbarCollapse{
+	width: 100%;	
+}
+div.collapse{
+	overflow-x: hidden;
+}
+footer{
+	background-color: black;
+	padding: 10px;
+}
+.navbar{
+	margin-bottom: 0px;
+}
+.container-principal{
+	position: relative;
+}
+.container-contenido{
+	margin-top: 50px;
+}
+html
+{
+    position: relative; 
+    min-height: 100%;
+}
+body
+{
+    margin: 0 0 46px;
+}
+footer
+{
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    height: 46px;
 }
