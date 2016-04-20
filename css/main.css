@@ -1,17 +1,52 @@
+html
+{
+    position: relative; 
+    min-height: 100%;
+}
+body
+{
+	position: relative;
+    margin: 0 0 46px;
+    background-color: #FFFFCC;
+}
+footer
+{
+    width: 100%;
+    bottom: -50px;
+    position: absolute;
+    height: 50px;
+}
+hr{
+	border-color: #CCCC33;/*color linea*/	
+}
+hr#subrayado{
+	width: 69%;
+	margin-right: 19%;
+}
+h1, h2, h3, h4, p{
+	font-family: 'Trebuchet MS';	
+}
+h1.titulo{
+	color: #339966;
+	font-weight:bold;
+}
 .social{	
 	width: 250px;
+	height: 100%;	
 	position: absolute;
 	z-index: 2;
+	background-color: #339966;/*color barra lateral*/
+	color: #E0E0E0;
 
 }
 .social ul {
 	list-style: none;
 }
 
-.social a {
+.social button.btn-curso {
 	display: inline-block;
 	color:black;
-	/*background: #000;*/
+	background: #000;
 	padding: 10px 15px;
 	text-decoration: none;
 	-webkit-transition:all 500ms ease;
@@ -19,14 +54,11 @@
 	transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
 }
 
-.social a {background:#3b5998;} /* Establecemos los colores de cada red social, aprovechando su class */
-/*.social a .icon-twitter {background: #00abf0;}
-.social a .icon-googleplus {background: #d95232;}
-.social a .icon-pinterest {background: #ae181f;}
-.social a .icon-mail {background: #666666;}*/
+.social button.btn-curso {background:#CCCC33;}/*color boton*/
 
-.social a:hover {
-	background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+.social button.btn-curso:hover {
+	color:white;
+	background: #000; /* color del boton con mouse encima */
 	padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
 }
 
@@ -34,8 +66,9 @@
 	margin-top: 50px;
 }
 .btn-curso{
-	width: 100%;
-	margin: 10px;
+	width: 90%;
+	margin-bottom: 6px;
+	margin-top: 6px;
 }
 .calendario{
 	border:solid 1px #777;
@@ -52,7 +85,7 @@ div.collapse{
 	overflow-x: hidden;
 }
 footer{
-	background-color: black;
+	background-color: black;/*color footer*/
 	padding: 10px;
 }
 .navbar{
@@ -64,19 +97,26 @@ footer{
 .container-contenido{
 	margin-top: 50px;
 }
-html
-{
-    position: relative; 
-    min-height: 100%;
+.navbar-toggle{
+	background-color: #CCCC33;	
 }
-body
-{
-    margin: 0 0 46px;
+@media only screen and (max-width: 767px){
+	.social{
+		width: 100%;		
+		height: initial;		
+	}
+	.calendario{
+		width: 100%;
+	}
+	body{
+		position: static;
+	}
 }
-footer
-{
-    width: 100%;
-    bottom: 0;
-    position: absolute;
-    height: 46px;
+@media only screen and (max-width: 991px) and (min-width: 768px){
+	.social{
+		width: 200px;		
+	}
+	.calendario{
+		width: 100%;
+	}
 }

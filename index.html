@@ -20,11 +20,40 @@
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">    
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">   
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+        
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('.btn-curso').click(function(){
+          $("#div-contenido").html(
+            ""
+            );
+        });  
+      });
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('.btn-curso').click(function () {
+          var url = $(this).attr('rel');
+          $('#iframe-calendar').attr('src', url);
+          $('#iframe-calendar').attr('style', 'visibility: visible;');
+          $('#iframe-calendar').reload();
+        });
+      });
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#miboton").click(function(){
+          $("#micapa").html("Nuevo contenido de la capa");
+        });
+      });
+    </script>
 </head>
-
 <body>
-
   <div class="container-principal">
     <div class="social text-center navbar navbar-default">
       <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
@@ -45,24 +74,25 @@
         </div>
         
         <h3>Cursos</h3>
-        <a class="btn btn-curso" href="">7°A</a>
-        <a class="btn btn-curso" href="">7°A</a>
-        <a class="btn btn-curso" href="">7°A</a>
-        <a class="btn btn-curso" href="">7°A</a>
-        <a class="btn btn-curso" href="">7°A</a>
+        <button rel="https://calendar.google.com/calendar/embed?showTz=0&amp;height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;src=q4qtghu675uddm3hjofm1qivic%40group.calendar.google.com&amp;color=%23711616&amp;ctz=America%2FSantiago" id='boton-curso1' class="btn btn-curso">1°A</button>
+        <button rel="http://www.wikipedia.com" id='boton-curso2' class="btn btn-curso">2°A</button>
+        <button rel="http://www.emol.com" id='boton-curso3' class="btn btn-curso">3°A</button>
+        <button id='boton-curso4' class="btn btn-curso">4°A</button>
+        <button id='boton-curso5' class="btn btn-curso">5°A</button>        
       </div>
     </div>  
   
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-offset-3 col-md-9 col-sm-offset-4 col-sm-8 col-xs-12 text-center container-contenido">
-          <h1 style="margin-right: 7%">Calendario de evaluaciones y actividadaes</h1>        
-        
-          <div class="div-calendario">
-            <iframe class="calendario" src="https://calendar.google.com/calendar/embed?showTz=0&amp;height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;src=q4qtghu675uddm3hjofm1qivic%40group.calendar.google.com&amp;color=%23711616&amp;ctz=America%2FSantiago" frameborder="0" scrolling="no">
-            </iframe>
+        <div class="col-md-offset-3 col-md-9 col-sm-offset-3 col-sm-9 col-xs-12 text-center container-contenido">
+          <h1 class="titulo" style="margin-right: 7%">Calendario de evaluaciones y actividades</h1>
+          <hr id="subrayado">   
+          <div id="div-contenido">
+            <h4 style="text-align: center"> Bienvenido al calendario de evaluaciones y actividades de los cursos de matemática de la profesora Mónica Gallo. Para ver el calendario seleccione, en primer lugar, el curso que desea solicitar, ubicado en la barra de navegación<h4>                    
           </div>
+          <iframe class="calendario" id='iframe-calendar' src='none' frameborder='0' scrolling='no' style="visibility: hidden">
+          </iframe> 
         </div>
       </div>
     </div>
@@ -70,26 +100,13 @@
 
   <footer>
     <div class="container text-center">
-      <p>Copyright &copy; Your Website 2014</p>
+      <p>Copyright &copy; Todos los derechos reservados</p>
     </div>
   </footer>
-  
-  
 
-  <!-- jQuery -->
   <script src="js/jquery.js"></script>
-
-  <!-- Bootstrap Core JavaScript -->
   <script src="js/bootstrap.min.js"></script>
-
-  <!-- Plugin JavaScript -->
   <script src="js/jquery.easing.min.js"></script>
-
-  <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
-  <!-- Custom Theme JavaScript -->
-  <script src="js/grayscale.js"></script>
 
 </body>
 
