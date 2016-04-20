@@ -64,6 +64,7 @@ h1.titulo{
 
 .info-personal{	
 	margin-top: 50px;
+	color: #E0E0E0;
 }
 .btn-curso{
 	width: 90%;
@@ -100,6 +101,10 @@ footer{
 .navbar-toggle{
 	background-color: #CCCC33;	
 }
+a:link   
+{   
+	text-decoration:none;   
+}   
 @media only screen and (max-width: 767px){
 	.social{
 		width: 100%;		
