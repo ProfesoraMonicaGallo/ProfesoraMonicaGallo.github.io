@@ -39,7 +39,7 @@
         $('.btn-curso').click(function () {
           var url = $(this).attr('rel');
           $('#iframe-calendar').attr('src', url);
-          $('#iframe-calendar').attr('style', 'visibility: visible;');
+          $('#iframe-calendar').attr('style', 'visibility: visible; height: 600px;');
           $('#iframe-calendar').reload();
         });
       });
@@ -59,34 +59,43 @@
         
         <a href="./index.html">
           <div class="info-personal">
-            <h1>Mónica Gallo</h1>             
+            <h1>Mónica Gallo</h1>
             <h4>Profesora de Matemáticas</h4>
             <h4>Colegio Los Conquistadores</h4>
           </div>
-        </a>    
-        <hr/>
-          
-        
-        
-        <h3>Cursos</h3>
-        <button rel="https://calendar.google.com/calendar/embed?showTz=0&amp;height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;src=q4qtghu675uddm3hjofm1qivic%40group.calendar.google.com&amp;color=%23711616&amp;ctz=America%2FSantiago" id='boton-curso1' class="btn btn-curso">1°A</button>
-        <button rel="http://www.wikipedia.com" id='boton-curso2' class="btn btn-curso">2°A</button>
-        <button rel="http://www.emol.com" id='boton-curso3' class="btn btn-curso">3°A</button>
-        <button id='boton-curso4' class="btn btn-curso">4°A</button>
-        <button id='boton-curso5' class="btn btn-curso">5°A</button>        
+        </a>
+        <hr/>        
+        <h3>Cursos</h3>        
+        <button rel="https://calendar.google.com/calendar/embed?src=p758gousmdsicmoqichpg1r3j8%40group.calendar.google.com&ctz=America/Santiago" id='boton-curso1' class="btn btn-curso">8°A</button>
+        <button rel="https://calendar.google.com/calendar/embed?src=vo8a4k6cump66uquo1ak0mi7jg%40group.calendar.google.com&ctz=America/Santiago" id='boton-curso2' class="btn btn-curso">1° Medio C</button>
+        <button rel="https://calendar.google.com/calendar/embed?src=aag3jbsoomehs3od12pf1dlo8g%40group.calendar.google.com&ctz=America/Santiago" id='boton-curso3' class="btn btn-curso">2° Medio B</button>
+        <button rel="https://calendar.google.com/calendar/embed?src=19rq9n9sdpntvlk64n9kafn5qg%40group.calendar.google.com&ctz=America/Santiago" id='boton-curso4' class="btn btn-curso">3° Medio B</button>
+        <button rel="https://calendar.google.com/calendar/embed?src=g53r1d1v7drlsqqkf2o4k0ni5k%40group.calendar.google.com&ctz=America/Santiago" id='boton-curso5' class="btn btn-curso">4° Medio B</button>        
       </div>
     </div>  
   
 
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-offset-3 col-md-9 col-sm-offset-3 col-sm-9 col-xs-12 text-center container-contenido">
-          <h1 class="titulo" style="margin-right: 7%">Calendario de evaluaciones y actividades</h1>
-          <hr id="subrayado">   
+    <div class="container-fluid container-image">
+      <div class="row">      
+        <div class="banner">
+          <div class="col-md-offset-3 col-md-9 col-sm-offset-3 col-sm-9 col-xs-12 text-center container-titulo">
+            <h2 class="titulo stroke">Calendario de evaluaciones y actividades</h2>
+            <hr id="subrayado">
+          </div>          
+        </div>
+        <div class="col-md-offset-3 col-md-9 col-sm-offset-3 col-sm-9 col-xs-12 text-center container-contenido">          
           <div id="div-contenido">
-            <h4 style="text-align: center"> Bienvenido al calendario de evaluaciones y actividades de los cursos de matemática de la profesora Mónica Gallo. Para ver el calendario seleccione, en primer lugar, el curso que desea solicitar, ubicado en la barra de navegación<h4>                    
+
+            <div class="row">
+              <div class="col-md-5 col-sm-5 col-xs-12">
+                <img id="img-calendario" src="./img/calendario.png">
+              </div>
+              <div class="col-md-7 col-sm-7 col-xs-12">
+                <h4 id="texto" style="text-align: center"> Bienvenido al calendario de evaluaciones y actividades de los cursos de matemática de la profesora Mónica Gallo. Para ver el calendario seleccione, en primer lugar, el curso que desea solicitar, ubicado en la barra de navegación.</h4>
+              </div>
+            </div>            
           </div>
-          <iframe class="calendario" id='iframe-calendar' src='none' frameborder='0' scrolling='no' style="visibility: hidden">
+          <iframe class="calendario" id='iframe-calendar' src='none' frameborder='0' scrolling='no' style="visibility: hidden; height:1px;">
           </iframe> 
         </div>
       </div>

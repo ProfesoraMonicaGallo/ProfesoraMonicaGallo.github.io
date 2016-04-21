@@ -7,7 +7,7 @@ body
 {
 	position: relative;
     margin: 0 0 46px;
-    background-color: #FFFFCC;
+    /*background-color: #CCCC66;*/    
 }
 footer
 {
@@ -17,18 +17,24 @@ footer
     height: 50px;
 }
 hr{
-	border-color: #CCCC33;/*color linea*/	
+	border-color: #CC9900;/*color linea*/	
 }
 hr#subrayado{
 	width: 69%;
 	margin-right: 19%;
 }
-h1, h2, h3, h4, p{
+h1, h2, h3, h4, h5{
 	font-family: 'Trebuchet MS';	
 }
-h1.titulo{
-	color: #339966;
+h2.titulo{
+	color: #E8E8E8;
 	font-weight:bold;
+
+}
+h4#texto{
+	margin-top: 50px;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 .social{	
 	width: 250px;
@@ -79,6 +85,17 @@ h1.titulo{
 	margin-bottom: 50px;
 	margin-right: 7%;
 }
+.banner {
+    /*padding: 100px 0;*/
+    height: 230px;
+    color: #f8f8f8;
+    background-image: url(../img/mate1.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+#img-calendario{
+	width: 80%;
+}
 #navbarCollapse{
 	width: 100%;	
 }
@@ -88,6 +105,7 @@ div.collapse{
 footer{
 	background-color: black;/*color footer*/
 	padding: 10px;
+	color: white;
 }
 .navbar{
 	margin-bottom: 0px;
@@ -95,8 +113,11 @@ footer{
 .container-principal{
 	position: relative;
 }
+.container-titulo{
+	margin-top: 90px;
+}
 .container-contenido{
-	margin-top: 50px;
+	margin-top: 30px;
 }
 .navbar-toggle{
 	background-color: #CCCC33;	
@@ -116,6 +137,14 @@ a:link
 	body{
 		position: static;
 	}
+	h4#texto{
+		margin-top: 50px;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	#img-calendario{
+		width: 30%;		
+	}
 }
 @media only screen and (max-width: 991px) and (min-width: 768px){
 	.social{
@@ -123,5 +152,10 @@ a:link
 	}
 	.calendario{
 		width: 100%;
+	}	
+	h4#texto{
+		margin-top: 10px;
+		margin-left: 5px;
+		margin-right: 5px;
 	}
 }
